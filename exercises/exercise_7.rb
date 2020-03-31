@@ -30,4 +30,7 @@ puts "----------"
 puts "Please create a store name:"
 storeName = gets.chomp.to_s
 store = Store.create(name: storeName)
-puts store.name
+puts "Store name: #{store.name}"
+puts store.valid?
+puts Store.count
+puts store.errors.messages
